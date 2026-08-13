@@ -1,0 +1,30 @@
+USER
+ └── user_id (PK)
+ └── name
+ └── email
+ └── password
+ └── role
+
+        1
+        │
+        │
+        Many
+
+EXIT_REQUEST
+ └── request_id (PK)
+ └── user_id (FK)
+ └── exit_date
+ └── exit_time
+ └── reason
+ └── status
+
+        1
+        │
+        │
+        Many
+
+EXIT_HISTORY
+ └── history_id (PK)
+ └── request_id (FK)
+ └── action
+ └── action_date
