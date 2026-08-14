@@ -1,0 +1,15 @@
+Exit Management System
+                            |
+          +-----------------+-----------------+
+          |                                   |
+       Frontend                            Backend
+          |                                   |
+     Login / Dashboard                 Spring Boot
+     Exit Request Form                      |
+     Admin Dashboard                 Controller Layer
+                                          ↓
+                                     Service Layer
+                                          ↓
+                                    Repository Layer
+                                          ↓
+                                       MySQL
