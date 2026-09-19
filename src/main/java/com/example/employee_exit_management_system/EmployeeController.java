@@ -24,4 +24,28 @@ public class EmployeeController {
     public List<Employee> getEmployees() {
         return employeeRepository.findAll();
     }
+
+    @PutMapping("/{id}")
+    public Employee updateEmployee(
+            @PathVariable Long id,
+            @RequestBody Employee employee) {
+
+        Employee existingEmployee =
+                employeeRepository.findById(id)
+                        .orElseThrow(() ->
+                                new RuntimeException("Employee not found"));
+
+        existingEmployee.setName(employee.getName());
+        existingEmployee.setEmail(employee.getEmail());
+        existingEmployee.setDepartment(employee.getDepartment());
+        existingEmployee.setExitDate(employee.getExitDate());
+        existingEmployee.setReason(employee.getReason());
+
+        return employeeRepository.save(existingEmployee);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteEmployee(@PathVariable Long id) {
+        employeeRepository.deleteById(id);
+    }
 }
