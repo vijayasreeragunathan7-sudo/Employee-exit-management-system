@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html>
 
@@ -27,11 +28,9 @@
             background: linear-gradient(135deg, #2563eb, #7c3aed);
             color: white;
             padding: 20px 40px;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
         }
 
@@ -40,14 +39,28 @@
             font-size: 24px;
         }
 
+        .nav-btn,
         .logout {
-            background: white;
-            color: #2563eb;
             border: none;
             padding: 10px 18px;
             border-radius: 7px;
             cursor: pointer;
             font-weight: bold;
+            margin-left: 8px;
+        }
+
+        .nav-btn {
+            background: #e0e7ff;
+            color: #2563eb;
+        }
+
+        .nav-btn:hover {
+            background: white;
+        }
+
+        .logout {
+            background: white;
+            color: #2563eb;
         }
 
         .logout:hover {
@@ -93,10 +106,8 @@
             background: white;
             padding: 22px;
             border-radius: 12px;
-
             box-shadow:
                 0 4px 15px rgba(0,0,0,0.08);
-
             border-left: 5px solid #2563eb;
         }
 
@@ -126,16 +137,11 @@
         .search-box,
         .form-box,
         .employee-box {
-
             background: white;
-
             padding: 25px;
-
             border-radius: 12px;
-
             box-shadow:
                 0 4px 15px rgba(0,0,0,0.08);
-
             margin-bottom: 25px;
         }
 
@@ -148,24 +154,16 @@
         /* SEARCH */
 
         .search-box input {
-
             width: 100%;
-
             padding: 13px;
-
             border: 1px solid #cbd5e1;
-
             border-radius: 8px;
-
             font-size: 15px;
-
             outline: none;
         }
 
         .search-box input:focus {
-
             border-color: #2563eb;
-
             box-shadow:
                 0 0 0 3px rgba(37,99,235,0.10);
         }
@@ -174,31 +172,21 @@
         /* FORM */
 
         .form-grid {
-
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
             gap: 15px;
         }
 
         .form-grid input {
-
             width: 100%;
-
             padding: 12px;
-
             border: 1px solid #cbd5e1;
-
             border-radius: 7px;
-
             font-size: 14px;
-
             outline: none;
         }
 
         .form-grid input:focus {
-
             border-color: #2563eb;
         }
 
@@ -206,29 +194,19 @@
         /* ADD BUTTON */
 
         .add-btn {
-
             margin-top: 20px;
-
             padding: 12px 25px;
-
             background:
                 linear-gradient(135deg,#2563eb,#7c3aed);
-
             color: white;
-
             border: none;
-
             border-radius: 7px;
-
             cursor: pointer;
-
             font-weight: bold;
-
             font-size: 15px;
         }
 
         .add-btn:hover {
-
             box-shadow:
                 0 5px 12px rgba(37,99,235,0.25);
         }
@@ -241,37 +219,26 @@
         }
 
         table {
-
             width: 100%;
-
             border-collapse: collapse;
-
             margin-top: 15px;
         }
 
         th {
-
             background: #eff6ff;
-
             color: #1e40af;
-
             padding: 12px;
-
             text-align: left;
-
             white-space: nowrap;
         }
 
         td {
-
             padding: 12px;
-
             border-bottom:
                 1px solid #e2e8f0;
         }
 
         tr:hover {
-
             background: #f8fafc;
         }
 
@@ -279,29 +246,20 @@
         /* STATUS */
 
         .status {
-
             display: inline-block;
-
             padding: 6px 10px;
-
             border-radius: 20px;
-
             font-size: 12px;
-
             font-weight: bold;
         }
 
         .status.exited {
-
             background: #fee2e2;
-
             color: #b91c1c;
         }
 
         .status.upcoming {
-
             background: #dcfce7;
-
             color: #15803d;
         }
 
@@ -309,48 +267,31 @@
         /* BUTTONS */
 
         .edit-btn {
-
             background: #2563eb;
-
             color: white;
-
             border: none;
-
             padding: 7px 12px;
-
             border-radius: 5px;
-
             cursor: pointer;
-
             font-weight: bold;
-
             margin-right: 5px;
         }
 
         .edit-btn:hover {
-
             background: #1d4ed8;
         }
 
         .delete-btn {
-
             background: #dc2626;
-
             color: white;
-
             border: none;
-
             padding: 7px 12px;
-
             border-radius: 5px;
-
             cursor: pointer;
-
             font-weight: bold;
         }
 
         .delete-btn:hover {
-
             background: #b91c1c;
         }
 
@@ -358,11 +299,8 @@
         /* NO DATA */
 
         .no-data {
-
             text-align: center;
-
             color: #64748b;
-
             padding: 20px;
         }
 
@@ -372,27 +310,22 @@
         @media (max-width: 700px) {
 
             .header {
-
                 padding: 18px;
             }
 
             .header h1 {
-
                 font-size: 18px;
             }
 
             .container {
-
                 margin: 20px auto;
             }
 
             .form-grid {
-
                 grid-template-columns: 1fr;
             }
 
             .stats {
-
                 grid-template-columns: 1fr;
             }
 
@@ -414,13 +347,21 @@
         Employee Exit Management System
     </h1>
 
-    <button
-        class="logout"
-        onclick="logout()">
+    <div>
 
-        Logout
+        <button
+            class="nav-btn"
+            onclick="goHome()">
+            🏠 Home
+        </button>
 
-    </button>
+        <button
+            class="logout"
+            onclick="logout()">
+            Logout
+        </button>
+
+    </div>
 
 </div>
 
@@ -448,7 +389,6 @@
     <!-- STATISTICS -->
 
     <div class="stats">
-
 
         <div class="stat-card">
 
@@ -500,7 +440,6 @@
 
         </div>
 
-
     </div>
 
 
@@ -529,38 +468,31 @@
             Add Employee Exit Record
         </h3>
 
-
         <div class="form-grid">
-
 
             <input
                 type="text"
                 id="name"
                 placeholder="Employee Name">
 
-
             <input
                 type="email"
                 id="email"
                 placeholder="Email">
-
 
             <input
                 type="text"
                 id="department"
                 placeholder="Department">
 
-
             <input
                 type="date"
                 id="exitDate">
-
 
             <input
                 type="text"
                 id="reason"
                 placeholder="Exit Reason">
-
 
         </div>
 
@@ -573,7 +505,6 @@
 
         </button>
 
-
     </div>
 
 
@@ -585,31 +516,21 @@
             Employee Exit Records
         </h3>
 
-
         <div class="table-container">
 
-
             <table>
-
 
                 <thead>
 
                     <tr>
 
                         <th>ID</th>
-
                         <th>Name</th>
-
                         <th>Email</th>
-
                         <th>Department</th>
-
                         <th>Exit Date</th>
-
                         <th>Reason</th>
-
                         <th>Status</th>
-
                         <th>Action</th>
 
                     </tr>
@@ -633,9 +554,7 @@
 
                 </tbody>
 
-
             </table>
-
 
         </div>
 
@@ -646,6 +565,18 @@
 
 
 <script>
+
+
+/* HOME */
+
+function goHome() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
 
 
 /* EMPLOYEE ARRAY */
@@ -673,21 +604,20 @@ function getEmployeeStatus(exitDate) {
 
     }
 
-
     const today =
         new Date();
 
-
     today.setHours(
-        0, 0, 0, 0
+        0,
+        0,
+        0,
+        0
     );
-
 
     const date =
         new Date(
             exitDate + "T00:00:00"
         );
-
 
     if (date <= today) {
 
@@ -767,7 +697,6 @@ function updateStatistics() {
 
     const total =
         employees.length;
-
 
     let exited = 0;
 
@@ -1368,3 +1297,4 @@ loadEmployees();
 </body>
 
 </html>
+```
